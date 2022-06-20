@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.2rem;   /* html e 10px dedigimiz icin body e 1.2 rem diyerek aslında 12px demis oluruz. */
+}
+
+.calculator {
+    border-radius: 5px;
+    border: 10px solid #034D97;
+    width: 400px;
+    position: absolute;                 /* ortalama icin */
+    top: 50%;                           /* ortalama icin */
+    left: 50%;                          /* ortalama icin */
+    transform: translate(-50%, -50%);   /* ortalama icin */
+    background-color: #E8F5FF;
+    padding: 14px;    
+}
+
+.calculator-input {
+    width: 100%;    
+    font-size: 3rem;
+    height: 60px;
+    border-bottom: 6px solid #A6A6A6;
+    background-color: #fff;
+    color: #000;
+    text-align: right;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+button {
+    height: 50px;
+    background-color: #eee;
+    border-radius: 3px;
+    border: 1px solid #c4c4c4;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #005DB2;
+}
+button:hover {
+    cursor: pointer;
+    color: #C20000;
+    background-color: #fff;
+}
+
+.operator {
+    background-color: #AFAEAE;
+    color: #fff;
+}
+
+.operator:hover{
+    color: #ff6d6d;
+    background-color: #AFAEAE;
+}
+
+.clear {
+    background-color: #E40101;
+    color: #fff;
+}
+
+.clear:hover {
+    background-color: #E40101;
+    color: #fff;
+    background-color: #f17377;
+}
+
+.equal-sign {
+    background-color: #005DB2;
+    height: 100%;
+    grid-area: 2/4/6/5;
+}
+
+.equal-sign:hover {
+    background-color: #2e86c0;
+    color: #fff;
+}
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 16px;
+}
+
+
+/* ==================== MEDIA QUERIES (SMALL DEVICES) ==================== */
+
+@media screen and (max-width: 600px) {
+    .calculator {
+        width: 350px;
+        border: 8px solid #034D97;
+        padding: 12px;
+    }
+    .calculator-input {
+        font-size: 2.6rem;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    button {
+        height: 42px;
+        font-size: 2rem;
+    }
+    .calculator-keys {
+        gap: 16px;
+        padding: 12px;
+    }
+
+
+}
